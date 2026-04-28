@@ -12,7 +12,6 @@ ENV/
 *.swp
 *.swo
 # Project specific
-data/raw/
 results/plots/
 *.log
 # OS generated files
