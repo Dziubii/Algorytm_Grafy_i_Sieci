@@ -8,7 +8,7 @@ Algorytm rozwiązuje problem optymalizacji lokalizacji służb ratunkowych, stos
 ## 🧠 Algorytm i Teoria
 Projekt opiera się na teorii grafów i problemie **centrum grafu** (p-center problem dla p=1):
 1.  **Reprezentacja**: Miasteczko jest modelowane jako graf ważony $G = (V, E)$, gdzie $V$ to budynki/skrzyżowania, a $E$ to drogi.
-2.  **Macierz odległości**: Wyznaczana za pomocą algorytmu **Floyda-Warshalla** lub wielokrotnego algorytmu **Dijkstry**.
+2.  **Macierz odległości**: Wyznaczana za pomocą algorytmu **Dijkstry**.
 3.  **Optymalizacja**: Wybór wierzchołka $u$, który minimalizuje wartość $e(u) = \max_{v \in V} d(u, v)$.
 
 ## 🛠️ Technologie
