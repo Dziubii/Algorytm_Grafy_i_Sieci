@@ -1,0 +1,36 @@
+# 🚒 FireStation Locator – Optymalizacja Lokalizacji Służb Ratunkowych
+
+Projekt ma na celu znalezienie optymalnego miejsca na budowę remizy straży pożarnej w wybranym obszarze, minimalizując maksymalną odległość do najdalszego punktu (problem 1-centrum).
+
+## 🎯 Cel projektu
+Algorytm rozwiązuje problem optymalizacji lokalizacji służb ratunkowych, stosując kryterium **minimax**. Celem jest zapewnienie, że w najgorszym możliwym scenariuszu czas dojazdu straży pożarnej do dowolnego budynku w miasteczku będzie jak najkrótszy.
+
+## 🧠 Algorytm i Teoria
+Projekt opiera się na teorii grafów i problemie **centrum grafu** (p-center problem dla p=1):
+1.  **Reprezentacja**: Miasteczko jest modelowane jako graf ważony $G = (V, E)$, gdzie $V$ to budynki/skrzyżowania, a $E$ to drogi.
+2.  **Macierz odległości**: Wyznaczana za pomocą algorytmu **Floyda-Warshalla** lub wielokrotnego algorytmu **Dijkstry**.
+3.  **Optymalizacja**: Wybór wierzchołka $u$, który minimalizuje wartość $e(u) = \max_{v \in V} d(u, v)$.
+
+## 🛠️ Technologie
+- **Python 3.x**
+- **NetworkX**: Modelowanie i analiza grafów.
+- **Matplotlib**: Wizualizacja wyników na płaszczyźnie.
+- **Pandas**: Przetwarzanie danych o infrastrukturze.
+
+## 📂 Struktura Projektu
+- `data/`: Dane wejściowe (pliki JSON/CSV z mapą).
+- `src/`: 
+    - `logic.py`: Implementacja algorytmu wyznaczania centrum.
+    - `visualization.py`: Skrypty do generowania map.
+- `main.py`: Główny punkt wejścia do aplikacji.
+
+## 🚀 Szybki start
+1. Zainstaluj biblioteki: `pip install networkx matplotlib pandas`
+2. Przygotuj plik z danymi w `data/map.csv`.
+3. Uruchom: `python main.py`
+
+## 📊 Przykład Wyniku
+Po wykonaniu obliczeń, program generuje wykres, gdzie:
+- **Kropki**: Budynki/Węzły sieci.
+- **Gwiazdka**: Optymalne położenie remizy.
+- **Statystyka**: Promień grafu (odległość do najdalszego punktu).
