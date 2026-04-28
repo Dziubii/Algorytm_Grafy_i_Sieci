@@ -13,12 +13,11 @@ Projekt opiera się na teorii grafów i problemie **centrum grafu** (p-center pr
 
 ## 🛠️ Technologie
 - **Python 3.x**
-- **NetworkX**: Modelowanie i analiza grafów.
 - **Matplotlib**: Wizualizacja wyników na płaszczyźnie.
 - **Pandas**: Przetwarzanie danych o infrastrukturze.
 
 ## 📂 Struktura Projektu
-- `data/`: Dane wejściowe (pliki JSON/CSV z mapą).
+- `data/`: Dane wejściowe (pliki CSV).
 - `src/`: 
     - `logic.py`: Implementacja algorytmu wyznaczania centrum.
     - `visualization.py`: Skrypty do generowania map.
